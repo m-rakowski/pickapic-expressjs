@@ -1,11 +1,12 @@
 import request from "supertest";
 import { Application } from "express";
 import createAppServer from "../../../src/server/server";
+import { postsDb } from "../../../src/db";
 
-describe("/posts route", () => {
+describe("/api/posts route", () => {
   let app: Application = createAppServer();
 
-  it("should respond with 200", (done) => {
-    request(app).get("/posts").expect(200, done);
+  it("should return []", (done) => {
+    request(app).get("/api/posts").expect(200, postsDb, done);
   });
 });

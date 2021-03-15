@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response, Router } from "express";
+import { postsDb } from "../db";
 
 const router = Router();
 
@@ -6,7 +7,8 @@ const router = Router();
 // @desc Authenticates a user
 // @access PUBLIC
 router.get("/", (req: Request, res: Response, next: NextFunction) => {
-  res.send(200);
+  res.setHeader("Content-Type", "application/json");
+  res.send(postsDb);
 });
 
 export default router;

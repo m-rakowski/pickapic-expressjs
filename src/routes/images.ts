@@ -6,7 +6,7 @@ const router = Router();
 // @desc Displays a images
 // @access PUBLIC
 router.get("/", (req: Request, res: Response, next: NextFunction) => {
-  res.send(200);
+  res.send([]);
 });
 
 export default router;
