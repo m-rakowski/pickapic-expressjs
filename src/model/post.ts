@@ -1,5 +1,5 @@
-import { Image } from './image';
-import { User } from './user';
+import { Image } from "./image";
+import { User } from "./user";
 
 export interface Post {
   postId?: string;
